@@ -9,7 +9,7 @@
     
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
-        <ToolbarItem Text="Update" Clicked="UpdateItem_Clicked" IconImageSource="icon_update.png"/>
+        <ToolbarItem Text="Update" Clicked="UpdateItem_Clicked" IconImageSource="icon_save.png"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
