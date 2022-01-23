@@ -8,8 +8,8 @@
              Title="New Item">
     
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
-        <ToolbarItem Text="Update" Clicked="UpdateItem_Clicked" />
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" IconImageSource="icon_cancel.png"/>
+        <ToolbarItem Text="Update" Clicked="UpdateItem_Clicked" IconImageSource="icon_update.png"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
