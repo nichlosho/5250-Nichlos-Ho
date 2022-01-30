@@ -84,14 +84,31 @@ namespace Mine.Services
 
         }
 
+        /// <summary>
+        /// Delete Item model
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<bool> DeleteAsync(string id)
-        {
-            if (id == null)
+        {   
+            //get data based on id
+            var data = await ReadAsync(id);
+
+            //if null return false
+            if (data == null)
             {
                 return false;
             }
 
-            var result = true;
+            //update data and store rows affected
+            var result = await Database.DeleteAsync(data);
+
+            //if no rows affected, return false;
+            if (result == 0)
+            {
+                return false;
+            }
+
 
             return true;
         }
