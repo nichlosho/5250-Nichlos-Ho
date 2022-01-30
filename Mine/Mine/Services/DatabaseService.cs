@@ -24,7 +24,7 @@ namespace Mine.Services
 
         async Task InitializeAsync()
         {
-            if (initialized)
+            if (!initialized)
             {
                 if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(ItemModel).Name))
                 {
