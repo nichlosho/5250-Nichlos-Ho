@@ -6,8 +6,7 @@ namespace UnitTests.Models
     public class ItemModelTests
     {
         [Test]
-        public void ItemModel_Constructor_Valid_Default_Should_Pass
-()
+        public void ItemModel_Constructor_Valid_Default_Should_Pass()
         {
             // Arrange
 
@@ -23,8 +22,7 @@ namespace UnitTests.Models
         }
 
         [Test]
-        public void ItemModel_Set_Get_Valid_Default_Should_Pass
-()
+        public void ItemModel_Set_Get_Valid_Default_Should_Pass()
         {
             // Arrange
 
@@ -45,6 +43,22 @@ namespace UnitTests.Models
             Assert.AreEqual("Description", result.Description);
             Assert.AreEqual("id", result.Id);
             Assert.AreEqual(1, result.Value);
+        }
+
+        [Test]
+        public void ItemModel_Get_Valid_Default_Should_Pass()
+        {
+            // Arrange
+
+
+            // Act
+            var result = new ItemModel();
+
+            // Reset
+
+
+            // Assert 
+            Assert.AreEqual(0, result.Value);
         }
     }
 }
