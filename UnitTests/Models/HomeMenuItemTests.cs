@@ -12,7 +12,7 @@ namespace UnitTests.Models
 
 
             // Act
-            var result = new ItemModel();
+            var result = new HomeMenuItem();
 
             // Reset
 
@@ -28,21 +28,17 @@ namespace UnitTests.Models
 
 
             // Act
-            var result = new ItemModel();
-            result.Text = "Text";
-            result.Description = "Description";
-            result.Id = "id";
-            result.Value = 1;
+            var result = new HomeMenuItem();
+            result.Title = "Text";
+            result.Id = MenuItemType.Items;
 
             // Reset
 
 
             // Assert 
             Assert.IsNotNull(result);
-            Assert.AreEqual("Text", result.Text);
-            Assert.AreEqual("Description", result.Description);
-            Assert.AreEqual("id", result.Id);
-            Assert.AreEqual(1, result.Value);
+            Assert.AreEqual("Text", result.Title);
+            Assert.AreEqual(MenuItemType.Items, result.Id);
         }
 
         [Test]
@@ -52,13 +48,13 @@ namespace UnitTests.Models
 
 
             // Act
-            var result = new ItemModel();
+            var result = new HomeMenuItem();
 
             // Reset
 
 
             // Assert 
-            Assert.AreEqual(0, result.Value);
+            Assert.AreEqual(MenuItemType.Items, result.Id);
         }
     }
 }
